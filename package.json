@@ -9,7 +9,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx --fix",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -48,6 +49,11 @@
   "gitHooks": {
     "pre-commit": "lint-staged"
   },
+  "commitlint": {
+      "extends": [
+          "@commitlint/config-conventional"
+      ]
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged --allow-empty",
@@ -57,7 +63,6 @@
   "lint-staged": {
     "*.{js,ts,tsx,jsx}": [
       "eslint --fix",
-      "prettier --write",
       "git add ."
     ]
   },
