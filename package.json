@@ -8,7 +8,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx --fix"
+    "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx --fix",
+    "precommit": "lint-staged"
   },
   "repository": {
     "type": "git",
@@ -37,15 +38,12 @@
   },
   "devDependencies": {
     "eslint": "^8.23.0",
-    "eslint-config-prettier": "^8.5.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-n": "^15.2.5",
-    "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-promise": "^6.0.1",
     "husky": "^8.0.1",
-    "lint-staged": "^13.0.3",
-    "prettier": "^2.7.1"
+    "lint-staged": "^13.0.3"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
@@ -64,6 +62,6 @@
     ]
   },
   "engines": {
-    "node": "^12.0.0"
+    "node": "^12.0.0 || >14.0.0"
   }
 }
