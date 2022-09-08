@@ -1,0 +1,90 @@
+{
+  "templateList": {
+    "微信主小程序": "maino2oedition",
+    "支付宝主小程序": "2021003129663368"
+  },
+
+  "config": {
+    "test": {
+      "appid": "wx0b9fe51f756a8762",
+      "type": "miniProgram",
+      "projectPath": "./dist/build/mp-weixin-template",
+      "privateKeyPath": "./tasks/keys/private.wx0b9fe51f756a8762.key",
+      "ignores": [
+        "node_modules/**/*"
+      ]
+    },
+    "uat": {
+      "appid": "wx0a7d9b229d3bd58c",
+      "type": "miniProgram",
+      "projectPath": "./dist/build/mp-weixin-template",
+      "privateKeyPath": "./tasks/keys/private.wx0a7d9b229d3bd58c.key",
+      "ignores": [
+        "node_modules/**/*"
+      ]
+    },
+    "online": {
+      "appid": "wx48a940ece4083cd0",
+      "type": "miniProgram",
+      "projectPath": "./dist/build/mp-weixin-template",
+      "privateKeyPath": "./tasks/keys/private.wx48a940ece4083cd0.key",
+      "ignores": [
+        "node_modules/**/*"
+      ]
+    }
+  },
+  "questions": {
+    "platform": {
+      "name": "platform",
+      "message": "请选择小程序类型",
+      "type": "list",
+      "choices": [
+        "微信",
+        "支付宝"
+      ]
+    },
+    "env": {
+      "name": "env",
+      "message": "请选择模板环境",
+      "type": "list",
+      "choices": [
+        "online",
+        "test",
+        "uat"
+      ]
+    },
+
+    "plugins": {
+      "name": "plugins",
+      "message": "是否需要直播插件？",
+      "type": "confirm"
+    },
+    "domain": {
+      "name": "domain",
+      "message": "请选择商家类型",
+      "type": "list",
+      "choices": [
+        "物美系-dmall.com",
+        "非物美系-dmall-os.cn"
+      ]
+    },
+    "template": {
+      "name": "template",
+      "message": "请选择使用的小程序模板",
+      "type": "list",
+      "choices": [
+        "Dmall超级小程序"
+      ]
+    },
+    "uniqueCode": {
+      "name": "uniqueCode",
+      "type": "input",
+      "message": "请输入小程序唯一编码（即uniqueCode）"
+    },
+    "ensure": {
+      "name": "ensure",
+      "type": "confirm",
+      "message": "您即将上传的模板为#temp#，环境为#env#。即将开始打包编译，是否确定？"
+    }
+  }
+}

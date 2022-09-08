@@ -1,0 +1,55 @@
+{
+  "name": "dmall-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./bin/index.js",
+  "bin": {
+    "kkb": "./bin/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/senglv/dmall-cli.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/senglv/dmall-cli/issues"
+  },
+  "homepage": "https://github.com/senglv/dmall-cli#readme",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "clear": "^0.1.0",
+    "commander": "^9.4.0",
+    "download-git-repo": "^3.0.2",
+    "figlet": "^1.5.2",
+    "handlebars": "^4.7.7",
+    "inquirer": "^9.1.1",
+    "leven": "^3.0.0",
+    "miniprogram-ci": "^1.8.35",
+    "open": "^8.4.0",
+    "ora": "^6.1.2",
+    "watch": "^1.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.23.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.5",
+    "eslint-plugin-promise": "^6.0.1",
+    "lint-staged": "^13.0.3"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js}": "eslint --fix",
+    "./bin/*": "eslint --fix"
+  },
+  "engines": {
+    "node": "^12.0.0"
+  }
+}
