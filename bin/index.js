@@ -16,11 +16,10 @@ Reflect.ownKeys(commands).forEach((commandKey)=>{
     .alias(commands[commandKey].alias)
     .description(commands[commandKey].description)
     .action(()=>{
-        if(commandKey === '*'){
+        if(commandKey == '*'){
             log(chalk.red(commands[commandKey].description))
         }else{
-            const commandPath = path.resolve(__dirname, `../lib/tasks/${commandKey}.js`)
-            require(commandPath)(...process.argv.slice(3))
+            require(path.resolve(__dirname, `../lib/tasks/${commandKey}.js`))(...process.argv.slice(3))
         }
     })
 })
