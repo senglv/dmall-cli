@@ -57,7 +57,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "node ./lib/preCommitCheck/index.js && lint-staged --allow-empty",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      "commit-msg": "node ./lib/preCommitCheck/index.js"
     }
   },
   "lint-staged": {
