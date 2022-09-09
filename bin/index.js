@@ -1,12 +1,12 @@
 #! /usr/bin/env node
 
+const figlet = require('figlet');
 const path = require('path');
 const program = require('commander');
 const chalk = require('chalk');
 // const leven = require('leven');
 const packageConfig = require('../package.json');
 const commands = require('../lib/commands');
-const { clear } = require('console');
 const log = console.log;
 
 Reflect.ownKeys(commands).forEach((commandKey) => {
@@ -25,7 +25,7 @@ Reflect.ownKeys(commands).forEach((commandKey) => {
 
 // 监听用户 help事件
 program.on('--help',() => {
-  clear();
+  log(chalk.green(figlet.textSync('welcome～', { horizontalLayout: 'full' })));
   log(chalk.yellow('\nExamples'));
   Reflect.ownKeys(commands).forEach((commandKey) => {
     commands[commandKey].examples.forEach((example) => {
