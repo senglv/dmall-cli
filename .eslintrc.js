@@ -48,6 +48,7 @@ module.exports = {
     ],
     // 使用模板字面量而非字符串连接
     'prefer-template': 'error',
+    'no-delete-var': 0,// 不能对var声明的变量使用delete操作符
     'prefer-reflect': 'error',
     // *号后面使用空格
     'generator-star-spacing': [
@@ -58,7 +59,7 @@ module.exports = {
     'max-len': [
       'warn',
       {
-        code: 120,
+        code: 160,
       },
     ],
     // 要求使用分号代替 ASI

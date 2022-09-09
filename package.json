@@ -30,29 +30,33 @@
     "download-git-repo": "^3.0.2",
     "figlet": "^1.5.2",
     "handlebars": "^4.7.7",
-    "inquirer": "^9.1.1",
+    "inquirer": "^8.2.0",
     "leven": "^3.0.0",
     "miniprogram-ci": "^1.8.35",
     "open": "^8.4.0",
-    "ora": "^6.1.2",
+    "ora": "^5.1.2",
     "watch": "^1.0.2"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "axios": "^0.25.0",
     "eslint": "^8.23.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-n": "^15.2.5",
     "eslint-plugin-promise": "^6.0.1",
     "husky": "^8.0.1",
-    "lint-staged": "^13.0.3"
+    "lint-staged": "^13.0.3",
+    "minidev": "^1.5.1"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
   },
   "commitlint": {
-      "extends": [
-          "@commitlint/config-conventional"
-      ]
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   },
   "husky": {
     "hooks": {
