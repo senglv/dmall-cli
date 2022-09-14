@@ -15,7 +15,6 @@ Reflect.ownKeys(commands).forEach((commandKey) => {
     .alias(commands[commandKey].alias)
     .description(commands[commandKey].description)
     .action(() => {
-      console.log('process.argv',process.argv);
       if (commandKey === '*') {
         log(chalk.red(commands[commandKey].description));
       } else {
