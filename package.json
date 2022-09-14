@@ -1,6 +1,6 @@
 {
   "name": "dmall-cli",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "",
   "main": "./bin/index.js",
   "bin": {
@@ -35,9 +35,8 @@
     "miniprogram-ci": "^1.8.35",
     "open": "^8.4.0",
     "ora": "^5.1.2",
-    "watch": "^1.0.2"
-  },
-  "devDependencies": {
+    "watch": "^1.0.2",
+
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
     "axios": "^0.25.0",
@@ -49,6 +48,8 @@
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "minidev": "^1.5.1"
+  },
+  "devDependencies": {
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
